@@ -1,2 +1,2 @@
 # arcadreams-better-posts
-Publicaciones mejoradas y sencillas mediante códigos.
+Description: Publicaciones mejoradas mediante Shortcodes sencillos para usar en tus Posts.
