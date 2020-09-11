@@ -208,6 +208,7 @@ padding: 1em;
 }
 
 
+
 // EVENTO
 add_shortcode( 'evento', 'shortcode_evento' );
 function shortcode_evento ( $atts, $content = null ) {
