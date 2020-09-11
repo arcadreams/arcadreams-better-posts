@@ -16,7 +16,7 @@ Text domain: arcadreams-better-posts
 //  Prevent Direct Access of this file
 // ==============================================
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if this file is accessed directly
+//if ( ! defined( 'ABSPATH' ) ) exit; // Exit if this file is accessed directly
 
 
 
