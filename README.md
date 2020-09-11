@@ -1,3 +1,3 @@
-# better-posts
+# arcadreams-better-posts
 Publicaciones mejoradas y sencillas mediante códigos.
 ...
