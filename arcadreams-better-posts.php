@@ -9,3 +9,15 @@ Author URI: https://arcadreams.com
 License: LicenciaGPL
 Text domain: arcadreams-better-posts
 */
+
+if ( ! defined( ‘ABSPATH’ ) ) exit; // Exit if accessed directly
+
+function activate_my_plugin() {
+    // Lo que quiero que haga el plugin cuando un usuario lo activa
+}
+register_activation_hook( __FILE__, 'activate_my_plugin' );
+
+function deactivate_my_plugin() {
+    // Lo que quiero que haga el plugin cuando un usuario lo desactiva
+}
+register_deactivation_hook( __FILE__, 'deactivate_my_plugin' );
