@@ -10,7 +10,7 @@ License: LicenciaGPL
 Text domain: arcadreams-better-posts
 */
 
-if ( ! defined( ‘ABSPATH’ ) ) exit; // Exit if accessed directly
+
 
 function activate_my_plugin() {
     // Lo que quiero que haga el plugin cuando un usuario lo activa
