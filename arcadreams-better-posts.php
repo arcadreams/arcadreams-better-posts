@@ -12,6 +12,15 @@ Text domain: arcadreams-better-posts
 */
 
 
+// ==============================================
+//  Prevent Direct Access of this file
+// ==============================================
+
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if this file is accessed directly
+
+
+
+require_once plugin_dir_path(__FILE__) . 'includes/mfp-functions.php';
 
 function activate_my_plugin() {
     // Lo que quiero que haga el plugin cuando un usuario lo activa
