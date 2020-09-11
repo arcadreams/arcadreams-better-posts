@@ -11,6 +11,9 @@ License: LicenciaGPL
 Text domain: arcadreams-better-posts
 */
 
+defined('ABSPATH') or die("Por aquí no vamos a ninguna parte");
+define('ADBP_DIR',plugin_dir_path(__FILE__));
+
 require_once plugin_dir_path(__FILE__) . 'shortcodes/better-posts-bootstrap.php';
 
 function activate_my_plugin() {
@@ -22,3 +25,9 @@ function deactivate_my_plugin() {
     // Lo que quiero que haga el plugin cuando un usuario lo desactiva
 }
 register_deactivation_hook( __FILE__, 'deactivate_my_plugin' );
+
+
+add_action( 'admin_menu', 'rjc_menu_administrador' );
+function rjc_menu_administrador() {
+add_submenu_page('tools.php','Gestión de Roles','RJC Eliminar roles','administrator',RJC_DIR.'/admin/gestionar.php');
+}
