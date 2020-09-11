@@ -12,5 +12,12 @@ if (!current_user_can ('administrator')) {
 <h1>BETTER POSTS</h1>
 <p>By Arca Dreams</p>
 
+<?php 
 
+$salida = "[caja]Fantástica caja[/caja]";
+
+echo apply_shortcode($salida);
+
+
+?>
 </div>
