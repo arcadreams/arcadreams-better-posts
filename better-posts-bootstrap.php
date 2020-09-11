@@ -7,10 +7,7 @@
  * 
  * ************************************************************************/
 
-/*
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-*/
+
 
 // Incluir Bootstrap CSS
 add_action( 'wp_enqueue_scripts', 'bootstrap_css');
@@ -21,55 +18,10 @@ function bootstrap_css() {
   			array(), 
   			'4.4.1'
   	); 
-
-    // ESTILOS GENERALES     
-     wp_enqueue_style( 
-            'estilos-generales', 
-            //'https://arcadreams.com/wp-content/themes/arcadreams/estilos-generales.css', 
-            //'https://drive.google.com/uc?export=download&id=1F6RkKJAjv3wFiXqPqyjwFRADPZVrvzSs', 
-//            'https://arcadreams.com/css-propio/estilos-generales.css',
-            array(),
-            null // example of no version number...    
-    );    
-
-    // ESTILOS MULTITEMA
-    wp_enqueue_style( 
-            'estilos-multitema', 
-            // 'https://arcadreams.com/wp-content/themes/arcadreams/estilos-multitema.css', 
-//            'https://arcadreams.com/css-propio/estilos-multitema.css',
-            array(),
-            null // example of no version number...    
-    ); 
-
-    //    if ($_SERVER['SERVER_NAME'] == 'arcadreams.com') {
-
-    // ESTILOS BOOTSTRAP PROPIOS
-    wp_enqueue_style( 
-            'estilos-bootstrap', 
-            // 'https://arcadreams.com/wp-content/themes/arcadreams/estilos-bootstrap.css', 
-//            'https://arcadreams.com/css-propio/estilos-bootstrap.css',
-            array(),
-            null // example of no version number...    
-    );
-
-//    }    
-
-    if (is_page('crear-articulo') or (get_post_type() == "articulo") ) {
-        wp_enqueue_style( 
-                'estilos-multitema-articulos', 
-                // 'https://arcadreams.com/wp-content/themes/arcadreams/estilos-multitema-articulos.css', 
-                // 'https://fra1.digitaloceanspaces.com/multitema/css/estilos-multitema-articulos.css',
-//                'https://arcadreams.com/css-propio/estilos-multitema-articulos.css',
-               array(),
-                null // example of no version number...    
-        ); 
-    }    
   					
 }
-//   					'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css', 
 
 
-// wp_enqueue_style('bootstrap-css', get_stylesheet_directory_uri() . '/bootstrap.min.css' );
 
 // Incluir Bootstrap JS y dependencia popper
 add_action( 'wp_enqueue_scripts', 'bootstrap_js');
@@ -87,21 +39,10 @@ function bootstrap_js() {
   					array('jquery','popper_js'), 
   					'4.4.1', 
   					true); 
- /* 					
-	wp_enqueue_script( 'bootstrap_js', 
-  					'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js', 
-  					array('jquery','bundle_js'), 
-  					'4.1.1', 
-  					true);   					
-*/
+
 }
 
 
-/*
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-*/
 
 
 // Integrate Bootstrap Responsive Table In WordPress Theme
@@ -178,6 +119,7 @@ ancho_completo="si"
 margen="doble"
 
 */
+
 add_shortcode( 'caja', 'shortcode_caja' );
 function shortcode_caja ( $atts, $content = null ) {
         $a = shortcode_atts( array(
@@ -861,13 +803,3 @@ function montar_tabla($array_tabla, $color_texto) {
 }
 
 
-/**************************************************************************
- * 
- * 						        FIN BOOTSTRAP
- * 
- * ************************************************************************/
-
-
-
-
-?>
