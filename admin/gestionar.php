@@ -16,7 +16,7 @@ if (!current_user_can ('administrator')) {
 
 $salida = "[caja]Fantástica caja[/caja]";
 
-echo apply_shortcode($salida);
+echo apply_shortcodes($salida);
 
 
 ?>
