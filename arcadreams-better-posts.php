@@ -2,6 +2,7 @@
 /*
 Plugin Name: Arca Dreams Better Posts
 Plugin URI: https://arcadreams.com
+GitHub Plugin URI: https://github.com/arcadreams/arcadreams-better-docs
 Description: Publicaciones mejoradas mediante Shortcodes sencillos para usar en tus Posts.
 Version: 1.0.1
 Author: Arca Dreams
