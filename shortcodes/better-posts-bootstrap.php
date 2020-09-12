@@ -96,6 +96,9 @@ function shortcode_caja ( $atts, $content = null ) {
 		    'margen' => 'vacio',			
 	        ), $atts );
 
+
+	$texto = "";
+
     $color = colores_bootstrap($a['color']);
     $color_fondo = "alert alert" . $color;
 
