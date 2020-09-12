@@ -25,14 +25,19 @@ if ( ! function_exists( 'ad_bp_fs' ) ) {
                 'slug'                => 'arcadreams-better-posts',
                 'type'                => 'plugin',
                 'public_key'          => 'pk_fb4d42347ba90614148b121df1151',
-                'is_premium'          => false,
+                'is_premium'          => true,
+                'premium_suffix'      => 'Better Posts Pro',
+                // If your plugin is a serviceware, set this option to false.
+                'has_premium_version' => true,
                 'has_addons'          => false,
-                'has_paid_plans'      => false,
+                'has_paid_plans'      => true,
                 'menu'                => array(
                     'first-path'     => 'plugins.php',
-                    'account'        => false,
                     'support'        => false,
                 ),
+                // Set the SDK to work in a sandbox mode (for development & testing).
+                // IMPORTANT: MAKE SURE TO REMOVE SECRET KEY BEFORE DEPLOYMENT.
+                'secret_key'          => 'sk_Yd_-ZvEBm&PX8yYUpyT2dqsr9=Vt!',
             ) );
         }
 
