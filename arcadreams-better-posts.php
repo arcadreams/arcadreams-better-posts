@@ -70,7 +70,7 @@ function deactivate_my_plugin() {
 register_deactivation_hook( __FILE__, 'deactivate_my_plugin' );
 
 
-add_action( 'admin_menu', 'rjc_menu_administrador' );
+// add_action( 'admin_menu', 'rjc_menu_administrador' );
 function rjc_menu_administrador() {
 add_submenu_page('tools.php','Gestión de Roles','Arca Dreams BETTER POSTS','administrator',ADBP_DIR.'/admin/gestionar.php');
 }
