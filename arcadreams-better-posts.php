@@ -11,16 +11,16 @@ License: LicenciaGPL
 Text domain: arcadreams-better-posts
 */
 
-if ( ! function_exists( 'abp_fs' ) ) {
+if ( ! function_exists( 'ad_bp_fs' ) ) {
     // Create a helper function for easy SDK access.
-    function abp_fs() {
-        global $abp_fs;
+    function ad_bp_fs() {
+        global $ad_bp_fs;
 
-        if ( ! isset( $abp_fs ) ) {
+        if ( ! isset( $ad_bp_fs ) ) {
             // Include Freemius SDK.
             require_once dirname(__FILE__) . '/freemius/start.php';
 
-            $abp_fs = fs_dynamic_init( array(
+            $ad_bp_fs = fs_dynamic_init( array(
                 'id'                  => '6882',
                 'slug'                => 'arcadreams-better-posts',
                 'type'                => 'plugin',
@@ -29,23 +29,20 @@ if ( ! function_exists( 'abp_fs' ) ) {
                 'has_addons'          => false,
                 'has_paid_plans'      => false,
                 'menu'                => array(
-                    'slug'           => 'arcadreams-better-posts',
+                    'first-path'     => 'plugins.php',
                     'account'        => false,
                     'support'        => false,
-                    'parent'         => array(
-                        'slug' => 'tools.php',
-                    ),
                 ),
             ) );
         }
 
-        return $abp_fs;
+        return $ad_bp_fs;
     }
 
     // Init Freemius.
-    abp_fs();
+    ad_bp_fs();
     // Signal that SDK was initiated.
-    do_action( 'abp_fs_loaded' );
+    do_action( 'ad_bp_fs_loaded' );
 }
 
 defined('ABSPATH') or die("Por aquí no vamos a ninguna parte");
