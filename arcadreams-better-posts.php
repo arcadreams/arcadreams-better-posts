@@ -15,7 +15,11 @@ defined('ABSPATH') or die("Por aquí no vamos a ninguna parte");
 define('ADBP_DIR',plugin_dir_path(__FILE__));
 
 require_once plugin_dir_path(__FILE__) . 'shortcodes/better-posts-bootstrap.php';
+require_once plugin_dir_path(__FILE__) . 'shortcodes/better-posts-colores.php';
 require_once plugin_dir_path(__FILE__) . 'shortcodes/better-posts-propios.php';
+require_once plugin_dir_path(__FILE__) . 'shortcodes/better-posts-terceros.php';
+
+
 
 
 function activate_my_plugin() {
