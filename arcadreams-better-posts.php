@@ -48,7 +48,6 @@ if ( ! function_exists( 'abp_fs' ) ) {
     do_action( 'abp_fs_loaded' );
 }
 
-
 defined('ABSPATH') or die("Por aquí no vamos a ninguna parte");
 define('ADBP_DIR',plugin_dir_path(__FILE__));
 
