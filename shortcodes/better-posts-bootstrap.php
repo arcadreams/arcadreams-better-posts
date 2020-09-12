@@ -70,45 +70,7 @@ function theme_prefix_bootstrap_responsive_table2( $content ) {
 }
 
 
-function colores_bootstrap($color) {
 
-
-	switch ($color) {
-    	case "azul":
-       		$color = "-primary";
-        	break;
-    	case "gris":
-       		$color = "-secondary";
-        	break;
-    	case "verde":
-       		$color = "-success";
-        	break;
-    	case "rojo":
-       		$color = "-danger";
-        	break;
-		case "amarillo":
-       		$color = "-warning";
-        	break;
-		case "turquesa":
-       		$color = "-info";
-        	break;
-		case "blanco":
-       		$color = "-light";
-        	break;
-		case "negro":
-       		$color = "-dark";
-        	break;
-		case "link":
-       		$color = "-link";
-        	break;
-		default:
-       		$color = "-primary";
-        	break;	
-	}
-	
-	return $color;
-}
-    
     
 
 // CAJA BOOTSTRAP
