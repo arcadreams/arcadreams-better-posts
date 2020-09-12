@@ -11,6 +11,44 @@ License: LicenciaGPL
 Text domain: arcadreams-better-posts
 */
 
+if ( ! function_exists( 'abp_fs' ) ) {
+    // Create a helper function for easy SDK access.
+    function abp_fs() {
+        global $abp_fs;
+
+        if ( ! isset( $abp_fs ) ) {
+            // Include Freemius SDK.
+            require_once dirname(__FILE__) . '/freemius/start.php';
+
+            $abp_fs = fs_dynamic_init( array(
+                'id'                  => '6882',
+                'slug'                => 'arcadreams-better-posts',
+                'type'                => 'plugin',
+                'public_key'          => 'pk_fb4d42347ba90614148b121df1151',
+                'is_premium'          => false,
+                'has_addons'          => false,
+                'has_paid_plans'      => false,
+                'menu'                => array(
+                    'slug'           => 'arcadreams-better-posts',
+                    'account'        => false,
+                    'support'        => false,
+                    'parent'         => array(
+                        'slug' => 'tools.php',
+                    ),
+                ),
+            ) );
+        }
+
+        return $abp_fs;
+    }
+
+    // Init Freemius.
+    abp_fs();
+    // Signal that SDK was initiated.
+    do_action( 'abp_fs_loaded' );
+}
+
+
 defined('ABSPATH') or die("Por aquí no vamos a ninguna parte");
 define('ADBP_DIR',plugin_dir_path(__FILE__));
 
