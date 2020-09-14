@@ -23,6 +23,7 @@ if ( ! function_exists( 'ad_bp_fs' ) ) {
             $ad_bp_fs = fs_dynamic_init( array(
                 'id'                  => '6882',
                 'slug'                => 'arcadreams-better-posts',
+                'premium_slug'        => 'arcadreams-better-posts-pro',
                 'type'                => 'plugin',
                 'public_key'          => 'pk_fb4d42347ba90614148b121df1151',
                 'is_premium'          => true,
