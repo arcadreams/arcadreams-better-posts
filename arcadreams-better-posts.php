@@ -32,6 +32,7 @@ if ( ! function_exists( 'ad_bp_fs' ) ) {
                 'has_premium_version' => true,
                 'has_addons'          => false,
                 'has_paid_plans'      => true,
+                'is_org_compliant'    => false,
                 'menu'                => array(
                     'slug'           => 'edit.php?post_type=better-posts',
                     'support'        => false,
