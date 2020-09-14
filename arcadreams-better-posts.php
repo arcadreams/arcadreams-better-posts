@@ -34,9 +34,11 @@ if ( ! function_exists( 'ad_bp_fs' ) ) {
                 'has_paid_plans'      => true,
                 'is_org_compliant'    => false,
                 'menu'                => array(
-                    'slug'           => 'edit.php?post_type=better-posts',
+                    'slug'           => 'better-posts',
                     'support'        => false,
-                    'network'        => true,
+                    'parent'         => array(
+                        'slug' => 'menu-arcadreams',
+                    ),
                 ),
                 // Set the SDK to work in a sandbox mode (for development & testing).
                 // IMPORTANT: MAKE SURE TO REMOVE SECRET KEY BEFORE DEPLOYMENT.
