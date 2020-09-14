@@ -19,7 +19,7 @@ function bootstrap_css() {
 		
 		$activar = false;
 		
-		if (is_page()) $activar = true;
+		if ( is_page() ) $activar = true;
 
 	}
 
