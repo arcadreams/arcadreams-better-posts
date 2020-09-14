@@ -32,7 +32,7 @@ if ( ! function_exists( 'ad_bp_fs' ) ) {
                 'has_addons'          => false,
                 'has_paid_plans'      => true,
                 'menu'                => array(
-                    'slug'           => 'edit.php?post_type=arcadreams-better-posts',
+                    'slug'           => 'edit.php?post_type=better-posts',
                     'support'        => false,
                     'network'        => true,
                 ),
