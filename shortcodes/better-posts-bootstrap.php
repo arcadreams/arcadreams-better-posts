@@ -14,17 +14,16 @@ add_action( 'wp_enqueue_scripts', 'bootstrap_css');
 function bootstrap_css() {
 
 	$activar = true;
-echo "vamoss";
+
 	if ( arcadreams_better_posts()->is__premium_only() ) {
+		
 		$activar = false;
-	echo "premium";	
+		
 		if (is_page()) $activar = true;
 
 	}
 
 	if ($activar) {
-	echo "activamos";
-	
 		wp_enqueue_style( 'bootstrap_css', 
   			'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css', 
   			array(), 
