@@ -13,11 +13,13 @@
 add_action( 'wp_enqueue_scripts', 'bootstrap_css');
 function bootstrap_css() {
 
+if ( arcadreams_better_posts()->is__premium_only() ) {
 	wp_enqueue_style( 'bootstrap_css', 
   			'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css', 
   			array(), 
   			'4.4.1'
   	); 
+}  	
   					
 }
 
