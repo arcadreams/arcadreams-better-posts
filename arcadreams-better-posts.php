@@ -11,16 +11,16 @@ License: LicenciaGPL
 Text domain: arcadreams-better-posts
 */
 
-if ( ! function_exists( 'ad_bp_fs' ) ) {
+if ( ! function_exists( 'arcadreams_better_posts' ) ) {
     // Create a helper function for easy SDK access.
-    function ad_bp_fs() {
-        global $ad_bp_fs;
+    function arcadreams_better_posts() {
+        global $arcadreams_better_posts;
 
-        if ( ! isset( $ad_bp_fs ) ) {
+        if ( ! isset( $arcadreams_better_posts ) ) {
             // Include Freemius SDK.
             require_once dirname(__FILE__) . '/freemius/start.php';
 
-            $ad_bp_fs = fs_dynamic_init( array(
+            $arcadreams_better_posts = fs_dynamic_init( array(
                 'id'                  => '6882',
                 'slug'                => 'arcadreams-better-posts',
                 'premium_slug'        => 'arcadreams-better-posts-pro',
@@ -46,20 +46,23 @@ if ( ! function_exists( 'ad_bp_fs' ) ) {
             ) );
         }
 
-        return $ad_bp_fs;
+        return $arcadreams_better_posts;
     }
 
     // Init Freemius.
-    ad_bp_fs();
+    arcadreams_better_posts();
     // Signal that SDK was initiated.
-    do_action( 'ad_bp_fs_loaded' );
+    do_action( 'arcadreams_better_posts_loaded' );
 }
 
 
 defined('ABSPATH') or die("Por aquí no vamos a ninguna parte");
 define('ADBP_DIR',plugin_dir_path(__FILE__));
 
-require_once plugin_dir_path(__FILE__) . 'shortcodes/better-posts-bootstrap.php';
+if ( arcadreams_better_posts()->is__premium_only() ) {
+	require_once plugin_dir_path(__FILE__) . 'shortcodes/better-posts-bootstrap.php';
+}
+
 require_once plugin_dir_path(__FILE__) . 'shortcodes/better-posts-colores.php';
 require_once plugin_dir_path(__FILE__) . 'shortcodes/better-posts-propios.php';
 require_once plugin_dir_path(__FILE__) . 'shortcodes/better-posts-terceros.php';
