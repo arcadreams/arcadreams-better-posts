@@ -51,6 +51,7 @@ if ( ! function_exists( 'ad_bp_fs' ) ) {
     do_action( 'ad_bp_fs_loaded' );
 }
 
+
 defined('ABSPATH') or die("Por aquí no vamos a ninguna parte");
 define('ADBP_DIR',plugin_dir_path(__FILE__));
 
